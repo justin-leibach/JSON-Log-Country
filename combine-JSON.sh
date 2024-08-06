@@ -4,7 +4,6 @@
 Using other methods like python scripts and direct use of jq crashed for lack of memory
 This bash script prevents that by iterating through single jq merge processes until completion
 '
-
 current_directory=$(pwd)
 
 # from user input, create variable called $filepath
@@ -33,7 +32,6 @@ for f in "${file_list[@]}"; do
 done
 
 echo "This may take a while"
-
 
 # iterate through each file in the file list array and combine it into a single json file using jq.
 for file in "${file_list[@]}"; do
