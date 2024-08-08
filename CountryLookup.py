@@ -75,9 +75,7 @@ def pie_chart(data_dict):
     # give value to numpy array
     y = np.array(values)
     # create pie chart
-    plt.pie(y, labels = country_labels)
-    # create legend
-    plt.legend(title = "Country of Origin:")
+    plt.pie(y, labels = country_labels,autopct='%1.2f%%')
     # create a variable for the figure
     fig = plt.gcf()
 
@@ -131,6 +129,6 @@ main()
 
 
 # Need to add these functionalities still:
-    # Sort out top 10 or 4
-    # figure out how to use file io effectively for creating 2 different files
+    # fix visual appearance of pie chart as well as add value
+    # figure out how to use file io effectively for creating 2 different files ( to create pie and bar chart )
     # create pandas functionality for output of of a panda data frame (from the dict)
