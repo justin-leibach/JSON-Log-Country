@@ -2,6 +2,8 @@
 
 This repo is for use with log files created by a dshield honeypot, for use in the SANS Internet Storm Center.
 
+Overall improvement needs to be made for excluding AWS sip's
+
 ## setup.sh
 This is a bash script to set your debian based linux distro.
 If using Ubuntu, I recommend creating a VENV for module installation. Instructions will be added here:
