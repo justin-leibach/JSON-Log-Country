@@ -2,6 +2,11 @@
 
 This repo is for use with log files created by a dshield honeypot, for use in the SANS Internet Storm Center.
 
+External libraries required (and available from pip): 
+            - numpy
+            - geoip2
+            - matplotlib
+
 Overall improvement needs to be made for excluding AWS sip's
 
 ## setup.sh
