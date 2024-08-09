@@ -59,8 +59,6 @@ This script takes the longest of all, and depending on your dataset and processi
 ## 3a. filter.sh
 <pre>
 This bash script will take the source ip from the **combine-JSON.sh** script and create a .csv file for use in **CountryLookup.py**
-
-You will notice that each entry is encapsulated in [] ... the **CountryLookup.py** takes care of this little problem.
 </pre>
 ## 3b. filter-with-exclude.sh
 <pre>
@@ -74,7 +72,7 @@ This bash script is the same sas **filter.sh** except it filters out your choice
 This python script will requires the following libraries: numpy, geoip, matplotlip, pandas, openpyxl, 
 pillow (may be installed already). If you used the **setup.sh** script, they have been installed.
 
-It takes an input csv file and looks up country names based on maxmind's GEOIP2 database.
+It takes an input csv file (any .csv with IP addresses) and looks up country names based on maxmind's GEOIP2 database.
 
 These countries are then counted and sorted for uniqueness before they are exported to a python dictionary, 
 and turned into a panda dataframe.
