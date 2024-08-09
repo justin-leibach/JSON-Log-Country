@@ -27,12 +27,15 @@ The output of this is immediately able to be queried and filtered with jq in the
 ## filter.sh
 This bash script will take the source ip form the **combine-JSON.sh** script and create a .csv file for use.
 
+## filter-with-exclude.sh
+This bash script is the same sas **filter.sh** except it filters out ip addresses of your choosing
+
 ## CountryLookup.py
-This python script is a work in progress, and can currently do this:
-    - [x] open (and close) the .csv file created by **filter.sh** and write it to a python list
-    - [ ] iterate through GEOIP to populate a country list, and count occurences
-    - [ ] create a dictionary with the key:value of country:count
-    - [ ] create a graphical representation of all countries
+This python script will requires the following libraries: numpy, geoip, matplotlip, (**pandas** Still need to add functionality), pillow (may be installed already)
+
+It takes an input csv file and looks up country names based on maxmind's GEOIP2 database.
+These countries are then counted, and sorted for uniqueness before they are exported to a python dictionary **and later a pandas dataframe excel**.
+The final output is a .png file with the top N (Defualt of 5) countries based on source IP address are graphically represented in a pie chart.
 
 
 
