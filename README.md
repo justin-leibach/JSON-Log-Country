@@ -5,13 +5,9 @@ This repo is for use with log files created by a dshield honeypot, for use in th
 External libraries required (and available from pip): 
 
             - numpy
-
             - geoip2
-
             - matplotlib
-
             - pandas
-
             - openpyxl
 </pre>
 # General Instructions:
@@ -26,8 +22,8 @@ These scripts will ask for absolute file paths. ( Example: /home/myname/mergedDa
 
 If you don't know, check this out: https://linuxhandbook.com/absolute-vs-relative-path/
 
-Finally, don't be afraid to tweek any of the scripts, especially the Python script. I have been very liberal with the comments to
-allow non-programmers the ability to modify.
+Finally, don't be afraid to tweek any of the scripts, especially the Python script. 
+I have been very liberal with the comments to allow non-programmers the ability to modify.
 </pre>
 ## 1. setup.sh
 <pre>
@@ -45,7 +41,6 @@ Requires (unaffiliated) free account creation: https://www.maxmind.com/en/geolit
 This script is a very useful standalone utility to follow up with jqueries of large datasets. You could stop here! (or not)
 
 I tested this using an entire month of log files, and the grand total combined line count of the merged file was **163,510,310**!
-
 Took my laptop approximately 5 minutes to complete.
 
 This bash script is an easy way to combine a large number of JSON files from a single directory into a single file.
@@ -76,15 +71,18 @@ This bash script is the same sas **filter.sh** except it filters out your choice
 
 ## 4. CountryLookup.py
 <pre>
-This python script will requires the following libraries: numpy, geoip, matplotlip, pandas, openpyxl, pillow (may be installed already). If you used the **setup.sh** script, they have been installed.
+This python script will requires the following libraries: numpy, geoip, matplotlip, pandas, openpyxl, 
+pillow (may be installed already). If you used the **setup.sh** script, they have been installed.
 
 It takes an input csv file and looks up country names based on maxmind's GEOIP2 database.
 
-These countries are then counted and sorted for uniqueness before they are exported to a python dictionary, and turned into a panda dataframe.
+These countries are then counted and sorted for uniqueness before they are exported to a python dictionary, 
+and turned into a panda dataframe.
 
 The final output is a pie-chart (.png) and .xlsx file with the top N (Defualt of 6) countries based on source IP address.
 
-This will overwrite any file in your current directory that is the default name of **country_DataFrame.xlsx** and **countryPieChart.png**
+This will overwrite any file in your current directory that is the default name of **country_DataFrame.xlsx** and
+**countryPieChart.png**
 </pre>
 
 
