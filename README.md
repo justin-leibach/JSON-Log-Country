@@ -1,6 +1,10 @@
 # JSON-Log-Country
 <pre>
-This repo is for use with log files created by a dshield honeypot, for use in the SANS Internet Storm Center.
+This repo is for use with log files created by a dshield honeypot, for use in the SANS
+Internet Storm Center.
+
+If you want to combine json files, filter to csv, and analyze source ip's to produce
+a pie chart and an excel file, you came to the right place.
 
 External libraries required (and available from pip): 
 
